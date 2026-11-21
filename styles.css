@@ -1574,10 +1574,50 @@ main section h2 em {font-family:Georgia,serif; font-weight:400;}
     background: linear-gradient(0deg, #161616 0%, #161616dc 14%, transparent 48%, #101010aa 100%);
   }
   .cover-link:hover { color: #ccc; }
-  main > section:is(.program, .outcomes, .about, .faq):not(.cover) {
+  main > section:is(.program, .outcomes, .faq):not(.cover) {
     background: #eee;
+    color: var(--ink);
     filter: grayscale(1) invert(1);
   }
   .intro, .join { background: #222; }
   .mobile-cta { background: #e8e8e8; color: #161616; }
+}
+
+.author-photo { position:absolute; inset:0; z-index:2; width:100%; height:100%; object-fit:cover; }
+main > section.about { filter:none; }
+.author-photo { object-position:50% 45%; }
+.work-portfolio { margin-top:clamp(32px,5vw,72px); border-top:1px solid var(--line); }
+.work-portfolio h3 { margin:20px 0 16px; font:600 1.15rem var(--sans); }
+.work-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(8px,2vw,24px); }
+.work-grid figure { margin:0; }
+.work-grid a,.work-grid img { display:block; width:100%; }
+.work-grid img { height:auto; aspect-ratio:3/4; object-fit:cover; object-position:50% 56%; }
+.work-grid figcaption { margin-top:9px; font-size:clamp(14px,1.4vw,17px); line-height:1.4; }
+@media (prefers-color-scheme:dark) {
+  .about { background:#191919; color:#f1f1ef; }
+  .about .section-label,.about .section-label span,.about-copy p,.about-copy h2 em,.about .signature { color:#c1c1c1; }
+  .work-portfolio { border-color:#525252; }
+}
+@media(max-width:650px) {
+  .cover h1 { line-height:.98; }
+  .about-card { min-height:0; aspect-ratio:4/5; }
+  .work-grid figcaption {overflow-wrap:anywhere;}
+}
+.header-cta, .cover-link, .faq-list summary { min-height:44px; align-content:center; }
+.join-action p { color:#ddd; margin:0; font-size:16px; }
+@media(max-width:650px) {
+  .cover-info p,.intro-copy p,.program-heading > p,.program-description,.outcome-list p,.about-copy p,.faq-list p,.faq-list summary,.join-bottom > p {font-size:16px; line-height:1.5;}
+  .cover-info p {max-width:35ch;}
+  .section-label,.cover-kicker,.join-topline,.program-title p,.about-card-index,.about-card-caption,.orbit-label,.orbit-core span,.note-side,.join .eyebrow,.site-footer small {font-size:11px;}
+  .note-strip p,.mobile-cta,.header-cta,.text-link {font-size:13px;}
+  .join-stamp {position:static; margin:24px 0 0 auto;}
+  .mobile-cta {bottom:max(10px,env(safe-area-inset-bottom));}
+  .endmark {font-size:23vw;}
+}
+@media(max-width:650px) {
+  .faq-list details p {font-size:16px;}
+  .cover::after {background:linear-gradient(0deg,#f1f1f1 0%,#f1f1f1ef 27%,transparent 55%,#fafafa99);}
+}
+@media(max-width:650px) and (prefers-color-scheme:dark) {
+  .cover::after {background:linear-gradient(0deg,#161616 0%,#161616ed 28%,transparent 55%,#101010aa);}
 }
