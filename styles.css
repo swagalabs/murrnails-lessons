@@ -1659,4 +1659,33 @@ a.purchase-cta:focus-visible { outline: 3px solid currentColor; outline-offset: 
   .cover-link.purchase-cta,.join-action,.join-action .purchase-cta {width:100%;}
   .join-action .purchase-cta {min-width:0;}
   .join-inner {min-height:0;}
+  a.mobile-cta.purchase-cta {
+    --cta-text: #151015;
+    color: var(--cta-text);
+    border-color: #ffb5ba;
+    background: linear-gradient(110deg, #fff 15%, #fff2f2 32%, #ffaaa9 52%, #ff434e 78%) 50% 50% / 260% 100%;
+  }
+}
+
+@media (max-width:650px) and (prefers-reduced-motion:no-preference) {
+  .mobile-cta.purchase-cta {
+    animation: mobile-checkout-pulse 1.8s ease-in-out infinite,
+               mobile-checkout-sheen 3.6s ease-in-out infinite alternate;
+  }
+
+  @keyframes mobile-checkout-sheen {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+  }
+
+  @keyframes mobile-checkout-pulse {
+    0%, 100% {
+      transform: scale(.97);
+      box-shadow: 0 4px 14px #0003;
+    }
+    50% {
+      transform: scale(1.01);
+      box-shadow: 0 0 0 4px var(--cta-text), 0 5px 18px #0005;
+    }
+  }
 }
