@@ -1495,9 +1495,10 @@ body {
 .cover-link {
   display:block;
   width:fit-content;
-  margin:-.85em 0 0 auto;
+  margin:16px 0 0 auto;
   border-bottom:2px solid;
-  font: 800 clamp(34px,4.6vw,72px)/1 Arial,sans-serif;
+  max-width:100%;
+  font: 800 clamp(24px,3.3vw,48px)/1.05 Arial,sans-serif;
   letter-spacing:-.075em;
 }
 .cover-link:hover { color:#414141; }
