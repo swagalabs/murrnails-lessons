@@ -1003,24 +1003,6 @@ h2 em {
   letter-spacing: 0.04em;
 }
 
-.join-stamp {
-  position: absolute;
-  top: 80px;
-  right: 8%;
-  width: 198px;
-  height: 198px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #5b5750;
-  border-radius: 50%;
-  color: #a7a299;
-  font-family: var(--serif);
-  font-size: 17px;
-  font-style: italic;
-  line-height: 1.25;
-  text-align: center;
-  transform: rotate(12deg);
-}
 
 .site-footer {
   min-height: 105px;
@@ -1083,12 +1065,6 @@ h2 em {
     gap: 5vw;
   }
 
-  .join-stamp {
-    right: 5%;
-    width: 155px;
-    height: 155px;
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 650px) {
@@ -1383,14 +1359,6 @@ h2 em {
     max-width: 255px;
   }
 
-  .join-stamp {
-    top: auto;
-    right: 6vw;
-    bottom: 26px;
-    width: 105px;
-    height: 105px;
-    font-size: 10px;
-  }
 
   .site-footer {
     min-height: 150px;
@@ -1610,7 +1578,6 @@ main > section.about { filter:none; }
   .cover-info p {max-width:35ch;}
   .section-label,.cover-kicker,.join-topline,.program-title p,.about-card-index,.about-card-caption,.orbit-label,.orbit-core span,.note-side,.join .eyebrow,.site-footer small {font-size:11px;}
   .note-strip p,.mobile-cta,.header-cta,.text-link {font-size:13px;}
-  .join-stamp {position:static; margin:24px 0 0 auto;}
   .mobile-cta {bottom:max(10px,env(safe-area-inset-bottom));}
   .endmark {font-size:23vw;}
 }
